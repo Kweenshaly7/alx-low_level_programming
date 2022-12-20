@@ -1,25 +1,15 @@
-#include "main.h"
+#include "0-main.h"
+#include <stdio.h>
 
 /**
- * main - update the value of a var using pointers
+ * reset_to_98 - update the value of a var using pointers
  * @n: int to update
  * Return: Always 0
  */
 
-int main(void)
+void reset_to_98(int *n);
 {
-	int n;
-
-	int *p;
-
-	n = 98;
-	p = &n;
-	printf("Value of 'n': %d\n", n);
-	printf("Address of 'n': %p\n", &n);
-	printf("Value of 'p': %p\n", p);
-
-	*p = 402;
-	printf("Value of 'n': %d\n", n);
+	*n = 98;
 
 	return (0);
 }
