@@ -14,6 +14,7 @@
  * Return: NULL if the function fail
  * or a Pointer to the concatenated space in memory
  */
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *concat;
