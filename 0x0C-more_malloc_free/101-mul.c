@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 int find_len(char *str);
-char *creat_xarray(int size);
+char *create_xarray(int size);
 char *iterate_zeroes(char *str);
 void get_prod(char *prod, char *mult, int digit, int zeroes);
 void add_nums(char *final_prod, char *next_prod, int next_len);
@@ -42,7 +42,8 @@ char *create_xarray(int size)
 		exit(98);
 
 	for (index = 0; index < (size - 1); index++)
-		array[index] = '\0';
+		array[index] = 'x';
+	array[index] = '\0';
 
 	return (array);
 }
@@ -81,7 +82,7 @@ int get_digit(char c)
 }
 
 /**
- * get_prod - multiplies a string of numers by a single digit
+ * get_prod - multiplies a string of numbers by a single digit
  * @prod: the buffer to store the result
  * @mult: The string of numbers
  * @digit: the single digit
