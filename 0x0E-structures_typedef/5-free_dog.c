@@ -6,7 +6,7 @@
  * @d: pointer to dog to free
  * Return: void
  */
-void free_dog(my_dog *d)
+void free_dog(dog_t *d)
 {
 	if (d)
 	{
