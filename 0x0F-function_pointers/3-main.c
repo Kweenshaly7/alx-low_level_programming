@@ -11,31 +11,28 @@
  */
 int main(int argc, char *argv[])
 {
-	int a = 0, b = 0, res = 0;
-	char s;
+	int a, b, c;
+	int (*f)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	/*check if there's only one operator*/
-	if (argv[2][1] != '\0')
-	{
-		printf("Error\n");
-		exit(99);
-	}
-
-	s = argv[2][0];
-	if (s != '+' && s != '-' && a != '/' && s != '*' && s != '%')
-	{
-		printf("Error\n");
-		exit(99);
-	}
-
+	
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	res = (get_op_func(argv[2]))(a, b);
-	printf("%\n", res);
+	f = get_op_func(argv[2]);
+	
+	if (f == NULL)
+	{
+		printf("Error\n");
+		exit(99);
+	}
+	
+	c = f(a, b);
+	
+	printf("%d\n", c);
+	
 	return (0);
 }
