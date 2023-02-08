@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * create_file -creates an array of chars, and initializes
+ * create_file - creates a file
  *
- * @text_content: is a NULL terminated string to write to the file
+ * @text_content: Pointer to a string to write to the file
  * @filename: is the name of the file to create
  *
  * Return: 1 on success, -1 on failure
